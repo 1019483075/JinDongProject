@@ -1,0 +1,474 @@
+
+		<style type="text/css">
+			
+			.header{width: 1210px;height: 100px; margin: 0 auto;}
+			.header .logo{width: 362px; float: left;padding: 20px 0;}
+			.header .logo .logoinner{display: block;width: 270px;height:60px; background: url(images/logo-201305.png) no-repeat 0 0; }
+			
+			.header .search{width: 538px;height: 40px;margin-top: 25px; float: left;}
+			.search .form #s{margin-bottom: 4px; border: 2px solid #B61D1D; border-right:none ; padding: 4px;width: 446px; height: 24px;line-height: 24px;float: left;font-size: 16px;}
+			.search .form .s-btn{padding: 2px 6px 3px 6px; width: 82px; height: 36px; text-align: center; line-height: 31px; font-size: 16px;background: #B61D1D; border: none;float: left;color: white;font-family: "Microsoft YaHei";cursor: pointer;}
+			
+			
+			.header .shopcar{width: 141px;height: 36px; margin: 25px 65px 0 0; float: right; position: relative; }
+			.shopcar .dropdown-btn{text-align: center;width: 75px; height: 34px; padding: 0 28px 0 36px; border: 1px solid #DFDFDF;background: #f9f9f9;}
+			.dropdown-btn .ci-left{position: absolute; background: url(images/jd2015img.png) 0 -58px no-repeat; display: block; top: 9px;left: 18px;width: 18px;height: 16px;}
+			.dropdown-btn .ci-right{position:absolute;top: 11px;right: 10px;width: 7px;height: 13px;overflow: hidden;font: 400 13px/13px simsun;color: #999;}
+			.dropdown-btn .ci-count{position: absolute;top: -4px;left: 104px;display: inline-block;padding: 1px 2px;font-size: 12px;line-height: 12px;color: #fff;background-color: #c81623;border-radius: 7px 7px 7px 0;min-width: 12px;text-align: center;}
+			.shopcar .dropdown-btn a{line-height: 34px;}
+			.shopcar .dropdown-layer1{width: 308px; height:auto !important;padding: 0; top: 36px; right:0px;background: #fff;border: 1px solid #ddd;display: none; z-index: 10;}
+			.shopcar .dropdown-layer1 .white1{width: 139px; height: 10px;position: absolute; top: -7px; right:0px;background: #FFFFFF;}
+			.shopcar .dropdown-layer1 .shopcar-inner{padding: 10px 15px;}
+			.shopcar-inner .shopcar-info .nogoods{padding: 0 0 0 30px; height: 49px;line-height: 49px;}
+			.shopcar-inner .shopcar-info .nogoods span{background: url(images/settleup-nogoods.png) no-repeat; display: inline-block; width: 56px; height: 49px;float: left;}
+			
+			
+			.nav{width: 100%; border-bottom: 2px solid #B1191A; height: 44px;}
+			.nav .nav-inner{width: 1210px;height: 44px; margin: 0 auto;position: relative; z-index: 7;}
+			.nav-inner .nav-left{width: 210px;height: 44px;background: #B1191A;float: left;}
+			.nav-inner .nav-left .dt{padding: 0;}
+			.nav-left .dt a{
+				display: block;
+			    height: 44px;
+			    padding: 0 10px;
+			    background: #B1191A;
+			    font: 400 15px/44px "microsoft yahei";
+			    color: #fff;
+			    text-decoration: none;
+			}
+			.nav-inner .nav-left .dd{
+				height: 466px;
+			    background: #c81623;
+			    margin-top: 2px;
+			    display: none;
+		   	}
+			
+			.nav-inner .nav-left .dd .nav-item{
+				border-left: 1px solid #b61d1d;
+			    position: relative;
+			    z-index: 3;
+			    height: 31px;
+			    color: #fff;}
+			.nav-inner .nav-left .dd .nav-item h3{
+				position: absolute;
+			    z-index: 2;
+			    height: 31px;
+			    padding: 0 10px;
+			    line-height: 31px;
+			    font-family: "microsoft yahei";
+			    font-size: 14px;
+			    font-weight: 400;
+			}
+			.nav-inner .nav-left .dd .nav-item h3 a{
+				color: white;
+			}
+			
+			.nav-inner .nav-left .dd .nav-item i{
+				position: absolute;
+			    z-index: 1;
+			    top: 9px;
+			    right: 14px;
+			    width: 4px;
+			    height: 14px;
+			    font: 400 9px/14px consolas;
+			}
+			
+			.nav-inner .nav-left .dd .nav-sub{
+				display: none;
+			    position: absolute;
+			    left: 209px;
+			    top: 45px;
+			    width: 999px;
+			    height: 465px;
+			    background: #f7f7f7;
+			    border: 1px solid #b61d1d;
+			    overflow: hidden;
+			}
+			
+			.nav-inner .nav-left .dd .nav-sub .item-sub{
+				width: 999px;
+				height: 465px;
+				overflow: hidden;
+				position: absolute;
+				left: 0;
+				top: 0;
+				display: none;
+			}
+			.nav-inner .nav-left .dd .nav-sub .item-sub-hover{display: block;}
+			
+			.nav-inner .nav-left .dd .nav-sub .subitems{
+				width: 790px;
+				float: left;
+			    
+			    padding: 6px 0 1006px 20px;
+			    margin-bottom: -1000px;
+			    background: #f7f7f7;
+			    min-height: 409px;
+			}
+			.subitems dl{overflow: hidden;}
+			.subitems dt{
+			    position: relative;
+			    float: left;
+			    width: 54px;
+			    padding: 8px 30px 0 0;
+			    text-align: right;
+			    font-weight: 700;
+			}
+			
+			.subitems dt a{
+				text-align: right;
+			    font-weight: 700;
+			    font-family: "Microsoft YaHei",tahoma,arial,"Hiragino Sans GB","\5b8b\4f53",sans-serif;
+			    font-size: 12px;
+			}
+			.subitems dt a i{    
+				position: absolute;
+			    top: 13px;
+			    right: 18px;
+			    width: 4px;
+			    height: 14px;
+			    font: 400 9px/14px consolas;}
+			
+			.subitems dd{
+				width: 620px;
+				padding: 6px 0;
+				overflow: hidden;
+				float: left;
+			}
+			
+			.subitems dd a{
+			    float: left;
+			    padding: 0 8px;
+			    margin: 4px 0;
+			    line-height: 16px;
+			    height: 16px;
+			    border-left: 1px solid #e0e0e0;
+			    white-space: nowrap;
+			}
+			
+			
+			
+			
+			
+			
+			.nav-inner .nav-right{overflow: hidden;float: left;}
+			.nav-inner .nav-right ul{list-style: none;}
+			.nav-inner .nav-right ul li{float: left;}
+			.nav-inner .nav-right ul li a{display: block;height: 44px;
+			    padding: 0 20px;
+			    text-align: center;
+			    text-decoration: none;
+			    font: 400 16px/44px "microsoft yahei";
+			    color: #333;
+			}
+			
+			.header .hotwords{ float: left ; width: 518px;	height: 20px; }
+			.hotwords .hotwords-item{margin-right: 10px; float: left; line-height: 20px;}
+		</style>
+
+
+	
+<!--		**************header部分********************-->		
+		<div class="header">
+			<div class="logo">
+				<a href="index.html" class="logoinner"></a>
+			</div>
+			<div class="search">
+				<div class="form">
+					<input type="text" name="s" id="s" value="" />
+					<button class="s-btn">搜索</button>
+				</div>
+			</div>
+			<div class="shopcar">
+				<div class="dropdown-btn">
+					<i class="ci-left"></i>
+					<span class="ci-right"><span>></span></span><a href="javascript:void(0)">我的购物车</a><span class="ci-count">0</span>
+				</div>
+				<div class="dropdown-layer1">
+					<div class="white1"></div>
+					<div class="shopcar-inner">
+						<div class="shopcar-info">
+							<div class="nogoods"><span></span>购物车中还没有商品，赶紧选购吧！</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="hotwords">
+				<a href="" class="hotwords-item" style="color: #c81623;">吃货节</a>
+				<a href="" class="hotwords-item">优惠券</a>
+				<a href="" class="hotwords-item">精选绿植</a>
+				<a href="" class="hotwords-item">手机秒杀</a>
+				<a href="" class="hotwords-item">1元拿走</a>
+				<a href="" class="hotwords-item">汽车香水</a>
+				<a href="" class="hotwords-item">实木沙发</a>
+				<a href="" class="hotwords-item">免费试用</a>
+				<a href="" class="hotwords-item">胶原蛋白</a>
+			</div>
+		</div>
+		<div class="cr">	</div>
+	
+<!--		**************nav部分********************-->		
+		<div class="nav">
+			<div class="nav-inner">
+				<div class="nav-left">
+					<div class="dt">
+						<a href="" class="no-red">全部商品分类</a>
+					</div>
+					<div class="dd">
+						<div class="dd-inner">
+							<div class="nav-item">
+								<h3><a href="">家用电器</a></h3>
+								<i>></i>
+							</div>
+							<div class="nav-item">
+								<h3><a href="">手机</a>、<a href="">数码</a>、<a href="">京东通信</a></h3>
+								<i>></i>
+							</div>
+							<div class="nav-item">
+								<h3><a href="">电脑、办公</a></h3>
+								<i>></i>
+							</div>
+							<div class="nav-item">
+								<h3><a href="">家居</a>、<a href="">家具</a>、<a href="">家装</a>、<a href="">厨具</a></h3>
+								<i>></i>
+							</div>
+							<div class="nav-item">
+								<h3><a href="">男装</a>、<a href="">女装</a>、<a href="">童装</a>、<a href="">内衣</a></h3>
+								<i>></i>
+							</div>
+							<div class="nav-item">
+								<h3><a href="">个护化妆</a>、<a href="">清洁用品</a>、<a href="">宠物</a></h3>
+								<i>></i>
+							</div>
+							<div class="nav-item">
+								<h3><a href="">鞋靴</a>、<a href="">箱包</a>、<a href="">珠宝</a>、<a href="">奢侈品</a></h3>
+								<i>></i>
+							</div>
+							<div class="nav-item">
+								<h3><a href="">运动户外</a>、<a href="">钟表</a></h3>
+								<i>></i>
+							</div>
+							<div class="nav-item">
+								<h3><a href="">汽车</a>、<a href="">汽车用品</a></h3>
+								<i>></i>
+							</div>
+							<div class="nav-item">
+								<h3><a href="">母婴</a>、<a href="">玩具乐器</a></h3>
+								<i>></i>
+							</div>
+							<div class="nav-item">
+								<h3><a href="">食品</a>、<a href="">酒类</a>、<a href="">生鲜</a>、<a href="">特产</a></h3>
+								<i>></i>
+							</div>
+							<div class="nav-item">
+								<h3><a href="">医药保健</a></h3>
+								<i>></i>
+							</div>
+							<div class="nav-item">
+								<h3><a href="">图书</a>、<a href="">音像</a>、<a href="">电子书</a></h3>
+								<i>></i>
+							</div>
+							<div class="nav-item">
+								<h3><a href="">彩票</a>、<a href="">旅行</a>、<a href="">充值</a>、<a href="">票务</a></h3>
+								<i>></i>
+							</div>
+							<div class="nav-item">
+								<h3><a href="">理财</a>、<a href="">众筹</a>、<a href="">白条</a>、<a href="">保险</a></h3>
+								<i>></i>
+							</div>
+						</div>
+						<div class="nav-sub">
+							<div class="item-sub">
+								<div class="subitems">
+									<dl class="st-p1">
+										<dt><a href="">大家电<i>></i></a></dt>
+										<dd>
+											<a href="">平板电视</a>
+											<a href="">家用空调</a>
+											<a href="">家用中央空调</a>
+											<a href="">冰箱</a>
+											<a href="">洗衣机</a>
+											<a href="">家庭影院</a>
+											<a href="">DVD</a>
+											<a href="">迷你音响</a>
+											<a href="">冷柜/冰吧</a>
+											<a href="">酒柜</a>
+											<a href="">家电配件</a>
+										</dd>
+									</dl>
+									<dl class="st-p2">
+										<dt><a href="">厨卫大电<i>></i></a></dt>
+										<dd>
+											<a href="">平板电视</a>
+											<a href="">家用空调</a>
+											<a href="">家用中央空调</a>
+											<a href="">冰箱</a>
+											<a href="">洗衣机</a>
+											<a href="">家庭影院</a>
+											<a href="">DVD</a>
+											<a href="">迷你音响</a>
+											<a href="">冷柜/冰吧</a>
+											<a href="">酒柜</a>
+											<a href="">家电配件</a>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="item-sub">
+								<div class="subitems">
+									<dl class="st-p1">
+										<dt><a href="">大家电2<i>></i></a></dt>
+										<dd>
+											<a href="">平板电视</a>
+											<a href="">家用空调</a>
+											<a href="">家用中央空调</a>
+											<a href="">冰箱</a>
+											<a href="">洗衣机</a>
+											<a href="">家庭影院</a>
+											<a href="">DVD</a>
+											<a href="">迷你音响</a>
+											<a href="">冷柜/冰吧</a>
+											<a href="">酒柜</a>
+											<a href="">家电配件</a>
+										</dd>
+									</dl>
+									<dl class="st-p2">
+										<dt><a href="">厨卫大电2<i>></i></a></dt>
+										<dd>
+											<a href="">平板电视</a>
+											<a href="">家用空调</a>
+											<a href="">家用中央空调</a>
+											<a href="">冰箱</a>
+											<a href="">洗衣机</a>
+											<a href="">家庭影院</a>
+											<a href="">DVD</a>
+											<a href="">迷你音响</a>
+											<a href="">冷柜/冰吧</a>
+											<a href="">酒柜</a>
+											<a href="">家电配件</a>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="nav-right">
+					<ul>
+						<li><a href="">服装城</a></li>
+						<li><a href="">美妆馆</a></li>
+						<li><a href="">超市</a></li>
+						<li><a href="">全球购</a></li>
+						<li><a href="">闪购</a></li>
+						<li><a href="">团购</a></li>
+						<li><a href="">拍卖</a></li>
+						<li><a href="">金融</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			//*****************header****************************
+			$(".shopcar").hover(	
+				function  () {
+					$(this).children(".dropdown-btn").css({
+						"background":"#fff",
+						"box-shadow":"0px 0px 5px  rgba(0,0,0,0.2)"
+						}).next().css({
+							"display":"block",
+							"box-shadow":"0px 0px 5px  rgba(0,0,0,0.2)"
+						})
+				},
+				function  () {
+					$(this).children(".dropdown-btn").css({
+						"background":"#f9f9f9",
+						"box-shadow":""
+						}).next().css({
+							"display":"none",
+							"box-shadow":""
+						})
+				}
+			)
+			$(".hotwords a").hover(
+				
+				function  () {
+					$(this).addClass("redcolor")
+				},
+				function  () {
+					$(this).not($(this).parent().children().eq(0)).removeClass("redcolor");
+				}
+			)
+			
+			$(".nav-left").mouseenter(function  () {
+				$(".dd").css("display","block");
+			}).mouseleave(function  () {
+				$(".dd").css("display","none");
+			})
+			
+			
+			
+			$('.nav-item').hover(
+				function  () {
+					$(this).css({
+						"background":"#f7f7f7"
+					}).find("a").css({
+						"color":"#b61d1d"
+					})
+					$(this).parent().next().css("display","block").find(".item-sub").eq($(this).index()).addClass("item-sub-hover");
+					$(this).find("i").css({
+						"right":0,
+						"top":0,
+						"height":"31px",
+						"background":"#f7f7f7"
+					})
+				},
+				function  () {
+					$(this).css({
+						"background":""
+					}).find("a").css({
+						"color":""
+					})
+					$(this).parent().next().find(".item-sub").eq($(this).index()).removeClass("item-sub-hover");
+					$(this).find("i").css({
+						"right":"14px",
+						"top":"9px",
+						"height":"14px",
+						"background":""
+					})
+				}
+			).parents(".dd").mouseleave(function  () {
+				$(".nav-sub").css("display","none");
+			})
+			
+			$(".item-sub").mouseenter(function  () {
+				$(this).addClass("item-sub-hover");
+				$('.nav-item').eq($(this).index()).css({
+					"background":"#fff"
+				}).find("a").css({
+					"color":"#b61d1d"
+				})
+			}).mouseleave(function(){
+				$(this).removeClass("item-sub-hover");
+				$('.nav-item').eq($(this).index()).css({
+					"background":""
+				}).find("a").css({
+					"color":""
+				})
+			})
+			
+			var goodsID=$.cookie("cartgoodsid");
+//			console.log(goodsID);
+			var s=[];
+			if ($.cookie("cartgoodsid")) {
+				s=$.cookie("cartgoodsid").split(",");
+			}
+			$(".ci-count").html(s.length);
+			if (s.length) {
+				$(".nogoods").css("display","none")
+			}else{
+				$(".nogoods").css("display","block")
+			}
+		</script>
+	</body>
+

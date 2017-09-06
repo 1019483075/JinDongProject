@@ -1,0 +1,284 @@
+body{
+	font: 12px/150% Arial,Verdana,"\5b8b\4f53";
+}
+button{
+	outline: none;
+}
+.w{
+	width: 990px;
+	margin: 0 auto;
+}
+
+.header .logo{
+	width: 300px;
+	height: 60px;
+	margin: 10px 0;
+}
+
+.header .logo a{
+	display: inline-block;
+	
+}
+
+.header .logo a img{
+	width: 170px;
+	height: 60px;
+	
+}
+
+.header .logo  b{
+	display: inline-block;
+	float: right;
+	width: 110px;
+	height: 40px;
+	background: url(../images/l-icon.png) no-repeat;
+	margin-top: 10px;
+}
+
+#container{
+	background-color: #fb3149;
+}
+
+#banner-bg{
+	background: url(../images/573da920N1989e336.jpg) 0px 0px no-repeat;
+	background-color: #fb3149;
+	height: 475px;
+}
+
+.login-form{
+	
+	width: 306px;
+	padding: 20px;
+	position: relative;
+	float: right;
+	top: 40px;
+	background: #fff;
+}
+
+.login-box{
+	width: 306px;
+	
+}
+
+.login-box .mt{
+	width: 306px;
+	height: 27px;
+	margin-bottom: 5px;
+}
+.login-box .mt h1{
+	display: inline-block;
+	height: 27px;
+	float: left;
+	font-size: 20px;
+	line-height: 27px;
+}
+.login-box .mt .mt-ex{
+	float: right;
+	margin-top: 5px;
+	
+}
+
+.mt-ex a{
+	color: #b61d1d;;
+	font-size: 14px;
+}
+
+.mt-ex b{
+	vertical-align: middle;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+	background: url(../images/pwd-icons-new.png) -104px -75px no-repeat;
+}
+
+.msgboxwrap{
+	width: 306px;
+	min-height: 26px;
+	margin: 5px 0 10px;
+}
+
+.msgbox{
+	position: relative;
+	width: 254px;
+	height: 18px;
+	padding: 3px 10px 3px 40px;
+	border: 1px solid #ffe57d;
+	margin: 2px 0 10px 0;
+	background: #fff6d2;
+}
+
+
+.msgbox b{
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	display: block;
+	margin-top: -8px;
+	width: 16px;
+	height: 17px;
+	overflow: hidden;
+	background: url(../images/pwd-icons-new.png) -104px -22px no-repeat;
+}
+
+.msgerror{
+	position: relative;
+	background: #ffebeb;
+	color: #e4393c;
+	border: 1px solid #e4393c;
+	padding: 3px 10px 3px 40px;
+	line-height: 18px;
+	min-height: 18px;
+}
+
+.msgerror b{
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	display: block;
+	margin-top: -8px;
+	width: 16px;
+	height: 16px;
+	overflow: hidden;
+	background: url(../images/pwd-icons-new.png) -104px -49px no-repeat;
+}
+
+
+.mc{
+	width: 306px;
+	height: 252px;
+	
+}
+
+.login-form .item{
+	position: relative;
+	margin-bottom: 20px;
+	border: 1px solid #bdbdbd;
+}
+
+.login-form .item-focus{
+	border: 1px solid #3aa2e4;
+}
+.login-form .item-error{
+	border-color: #e4393c;
+}
+
+
+
+.item	.login-label{
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 38px;
+    border-right: 1px solid #bdbdbd;
+    background: url(../images/pwd-icons-new.png) no-repeat;
+
+}
+
+.item .login-label-focus{
+	border-color: #3aa2e4;
+	background-position-y: -48px !important;
+}
+
+.item .login-label-error{
+
+	border-color: #e4393c;
+	
+	background-position-y: -96px !important;
+}
+
+.item .itxt{
+	
+	line-height: 18px;
+	height: 18px;
+	border: 0;
+	padding: 10px 0 10px 50px;
+	width: 254px;
+	float: none;
+	overflow: hidden;
+	font-size: 14px;
+	font-family: '\5b8b\4f53';
+	*margin: -1px 0 0;
+}
+
+.item	.clr{
+	position: absolute;
+	z-index: 20;
+	right: 6px;
+	top: 12px;
+	width: 14px;
+	height: 14px;
+	background: url(../images/pwd-icons-new.png) no-repeat -25px -143px; 
+	display: none;
+	cursor: pointer;
+}
+
+.item .pwd-label{
+	background-position: -48px 0;
+}
+
+.login-form .item-checkbox{
+	margin-bottom: 15px;
+	border: none;
+}
+
+.safe span{
+	display: inline-block;
+}
+.checkr{
+	float: right;
+	
+}
+.checkr a{
+	color: #666;
+}
+.checkr a:hover{
+	color: #E4393C;
+	text-decoration: underline;
+}
+
+.item #loginbtn{
+	border: 1px solid #e85356;
+	
+	width: 304px;
+	background: #e4393c;
+	height: 33px;
+
+	color: #fff;
+	font-size: 20px;
+	font-family: 'Microsoft YaHei';
+	
+}
+
+.coagent h5{
+	font-weight: 400;
+	color: #999;
+	line-height: 22px;
+}
+.coagent ul{
+	overflow: hidden;
+	line-height: 22px;
+}
+.coagent ul li{
+	float: left;
+}
+.coagent ul li a{
+	color: #666666;
+}
+
+.coagent .line{
+	color: #ccc;
+	padding: 0 10px;
+}
+
+.login-form .erweima{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 60px;
+	height: 60px;
+	display: block;
+	background: url(../images/login-qricon-01.png) no-repeat -60px 0;
+}

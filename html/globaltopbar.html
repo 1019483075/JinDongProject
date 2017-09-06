@@ -1,0 +1,448 @@
+<style type="text/css">
+	.topbar{width: 100%;line-height:30px;background: #F1F1F1;}
+	.topbar .inner{width: 1210px;margin: 0 auto; height: 30px;}
+	
+	.topbar .inner .inner-left{width: 97px; float: left;}
+	
+	/***************/
+	.dropdown-btn{padding: 0 25px 0 10px;position: relative;height: 30px;}
+	.dropdown-btn .dropdown-btn-jt{position: absolute;top:12px;right: 8px;height: 7px;width: 15px; text-align: center;overflow: hidden;    transition: transform .1s ease-in 0s;}
+	.dropdown-btn .dropdown-btn-jt span{position: relative;	top: -15px;}
+	.dropdown-layer{padding: 10px 0 10px 10px;position: absolute; top: 30px; left:0px;background: #fff;border: 1px solid #ddd;display: none; z-index: 9;}
+	.dropdown-layer .white{height: 10px;position: absolute; top: -7px; left:0px;background: #FFFFFF;}
+	.dropdown-layer1{width: 1210px;height: 150px;padding: 20px 0 16px 0;position: absolute; top: 30px; right:2px; background: #fff;border: 1px solid #ddd;display: none;z-index: 1;}
+	.white1{width:79px;height:10px;position: absolute; top: -7px; right:0px;background: #FFFFFF;}
+	/***************/
+	
+	
+	.dropdown{ position: relative; padding: 0 2px 0 0; }
+	.dropdown-hover{border-left: 1px solid #ddd; border-right: 1px solid #ddd; background: #FFFFFF;}
+	.topbar li:hover .dropdown-btn-jt{transform:rotate(180deg)}
+	
+	.dropdown .dropdown-btn{}
+	.dropdown .dropdown-btn .dropdown-btn-jt{}
+	.dropdown .dropdown-btn .dropdown-btn-jt span{}
+	.dropdown .dropdown-layer{width: 301px;}
+	.dropdown-layer .white{width: 93px;}
+	.dropdown-layer .city{width: 60px; line-height: 24px; float: left;    padding: 2px 0;}
+	.dropdown-layer .city a{width: 40px;height: 24px;display: block;text-align: center; }
+	.dropdown-layer .city .seleced{background: #C81623;color: #fff;}
+	
+	
+	.topbar .inner .inner-right{float: right;}
+	.inner-right .spacer{width: 1px;height: 12px;margin-top: 9px;background: #DDDDDD;float: left;}
+	.inner-right-p0{margin-right: 10px;padding: 0 2px;float: left;}
+	.inner-right-p1{margin-right: 10px;padding: 0 2px;float: left;}
+	.inner-right-p2{padding: 0 2px;float: left;}
+	.dt{padding: 0 8px;}
+	
+	.inner-right-p3{padding: 0 2px;float: left;position: relative;}
+	.inner-right-p3 .dropdown-btn{padding: 0 25px 0 8px;}
+	.inner-right-p3 .dropdown-btn .dropdown-btn-jt{}
+	.inner-right-p3 .dropdown-layer{width: 280px;left:2px; padding: 0;}
+	.inner-right-p3 .white{width: 79px;}
+	.inner-right-p3 .uesrinfo{padding: 10px 0 10px 15px;}
+	.uesrinfo .u-pic{width: 60px;height: 60px; float: left; margin-right: 10px;}
+	.uesrinfo .u-pic img{border-radius: 50%;}
+	.uesrinfo .u-login{padding: 6px 0 0 0;font-weight: 700;width: 265px; line-height: 24px;}
+	.otherinfo{margin: 5px 0 10px 0;padding: 0 0 0 15px; overflow: hidden;}
+	.otherinfoitem{width: 126px; height: 24px; line-height: 24px;}
+	.otherinfo .otherinfo-left{width: 126px;float: left;}
+	.otherinfo .otherinfo-right{width: 126px; float: left;}
+	
+	.inner-right-p4{padding: 0 2px;float: left;}
+	.inner-right-p5{padding: 0 2px;float: left;}
+	
+	
+	
+	.inner-right-p6{padding: 0 2px;float: left;position: relative;}
+	.inner-right-p6 .dropdown-btn{padding: 0 25px 0 25px;}
+	.inner-right-p6 .dropdown-btn .ci-left{background: url(images/jd2015img.png) no-repeat 0 0; width: 15px;height: 20px; display: block; position: absolute; left: 7px; top: 5px; }
+	.inner-right-p6 .dropdown-layer{width: 250px;height: 195px;left:2px;padding: 0;}
+	.inner-right-p6 .white{width: 96px;}
+	.inner-right-p6 .p6inner{width: 250px; height: 195px; background: url(images/jd-app.png) no-repeat 0 0;}
+	
+	.inner-right-p7{padding: 0 2px;float: left;position: relative;}
+	.inner-right-p7 .dropdown-btn{padding: 0 25px 0 8px;}
+	.inner-right-p7 .dropdown-btn .dropdown-btn-jt{}
+	.inner-right-p7 .dropdown-layer{width: 79px;height: 100px; left: 2px; padding: 0; }
+	.inner-right-p7 .white{width: 79px;}
+	
+	
+	.inner-right-p8{padding: 0 2px;float: left;position: relative;}
+	.inner-right-p8 .dropdown-btn{padding: 0 25px 0 8px;}
+	.inner-right-p8 .dropdown-btn .dropdown-btn-jt{}
+	.inner-right-p8 .dropdown-layer{width: 170px;left: 2px; padding: 0px; /*display: block;*/}
+	.inner-right-p8 .white{width: 79px;}
+	.inner-right-p8 .p8-item{padding: 0 0 0 10px; width: 160px;}
+	.inner-right-p8 .p8-item1{padding: 0 0 0 10px; width: 70px;line-height: 24px; float: left;}
+	.inner-right-p8 .p8-item2{clear: left; padding: 5px 0 0 10px; margin: 5px 0 0 0; border-top: 1px dotted #666; line-height: 24px;}
+	
+	.inner-right-p9{padding: 0 2px;float: left;position: relative;}
+	.inner-right-p9 .dropdown-btn{padding: 0 25px 0 8px;}
+	.inner-right-p9 .dropdown-btn .dropdown-btn-jt{}
+	.inner-right-p9 .dropdown-layer1{width: 1210px;height: 150px;padding: 20px 0 16px 0;position: absolute; top: 30px; right:2px; background: #fff;border: 1px solid #ddd;display: none;z-index: 8;}
+	.inner-right-p9 .white1{width:79px;height:10px;position: absolute; top: -7px; right:0px;background: #FFFFFF;}
+	.inner-right-p9 dl{padding: 0 0 0 20px; float: left;}
+	dl dt{font-size: 14px;font-weight: 700;}
+	.inner-right-p9 .p9-part1{width: 347px; }
+	.inner-right-p9 .p9-part2{width: 259px; border-left: 1px solid #ddd; }
+	.inner-right-p9 .p9-part3{width: 259px; border-left: 1px solid #ddd;}
+	.inner-right-p9 .p9-part4{width: 259px; border-left: 1px solid #ddd;}
+	.inner-right-p9 dt{margin-bottom: 6px;}
+	.inner-right-p9 .p9item{width: 86px; line-height: 24px; float: left;}
+</style>
+
+
+<div class="topbar">
+	<div class="inner">
+		<ul class="inner-left">
+			<li class="dropdown">
+				<div class="dropdown-btn">
+					<span class="dropdown-btn-jt"><span>◇</span></span><span>送至：</span><span class="seleced-city">北京</span>
+				</div>
+				<div class="dropdown-layer">
+					<div class="white"></div>
+					<div class="city"><a class="seleced no-red" href="javascript:void(0)">北京</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">上海</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">天津</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">重庆</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">河北</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">山西</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">河南</a></div>
+					<div class="city"><a class="no-red" class="no-red"  href="javascript:void(0)">辽宁</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">吉林</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">黑龙江</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">内蒙古</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">江苏</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">山东</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">安徽</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">浙江</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">福建</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">湖北</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">湖南</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">广东</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">广西</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">江西</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">四川</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">海南</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">贵州</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">云南</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">西藏</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">陕西</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">甘肃</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">青海</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">宁夏</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">新疆</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">台湾</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">香港</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">澳门</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">钓鱼岛</a></div>
+					<div class="city"><a class="no-red" href="javascript:void(0)">海外</a></div>
+				</div>
+			</li>
+		</ul>
+		<ul class="inner-right">
+			<li class="inner-right-p0" style="display: none;"><a href="" style="color:#c81623;"></a>&nbsp;&nbsp;<a class="logout" href="javascript:;">退出</a></li>
+			<li class="inner-right-p1" ><a href="html/login.html" style="color:#c81623;">请登录</a>&nbsp;&nbsp;<a href="html/register.html">免费注册</a></li>
+			<li class="spacer"></li>
+			<li class="inner-right-p2"><div class="dt"><a href="">我的订单</a></div></li>
+			<li class="spacer"></li>
+			<li class="inner-right-p3">
+				<div class="dropdown-btn dt ">
+					<span class="dropdown-btn-jt"><span>◇</span></span><a href="">我的京东</a>
+				</div>
+				<div class="dropdown-layer">
+					<div class="white"></div>
+					<div class="uesrinfo">
+						<div class="u-pic">
+							<a href=""><img src="images/no-img_mid_.jpg" alt="" style="width: 60px; height: 60px;" /></a>
+						</div>
+						<div class="u-login">
+							<a class="topbarlogin" href="">你好，请登录</a>
+						</div>
+						<div class="u-extra">
+							<a href="">优惠券</a>
+							&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+							<a href="">消息</a>
+						</div>
+					</div>
+					<div class="otherinfo">
+						<div class="otherinfo-left">
+							<div class="otherinfoitem">待处理消息</div>
+							<div class="otherinfoitem">咨询回复</div>
+							<div class="otherinfoitem">降价商品</div>
+							<div class="otherinfoitem">返修退换货</div>
+						</div>
+						<div class="otherinfo-right">
+							<div class="otherinfoitem">我的关注</div>
+							<div class="otherinfoitem">我的京豆</div>
+							<div class="otherinfoitem">我的理财</div>
+							<div class="otherinfoitem">京东白条</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="spacer"></li>
+			<li class="inner-right-p4"><div class="dt"><a href="">京东会员</a></div></li>
+			<li class="spacer"></li>
+			<li class="inner-right-p5"><div class="dt"><a href="">企业采购</a></div></li>
+			<li class="spacer"></li>
+			<li class="inner-right-p6">
+				<div class="dropdown-btn dt">
+					<i class="ci-left"></i>
+					<span class="dropdown-btn-jt"><span>◇</span></span><a href="">手机京东</a>
+				</div>
+				<div class="dropdown-layer">
+					<div class="white"></div>
+					<div class="p6inner">
+						
+					</div>
+				</div>
+			</li>
+			<li class="spacer"></li>
+			<li class="inner-right-p7">
+				<div class="dropdown-btn dt">
+					<span class="dropdown-btn-jt"><span>◇</span></span><i>关注京东</i>
+				</div>
+				<div class="dropdown-layer">
+					<div class="white"></div>
+					<div class="p7inner"><img src="images/erweima.jpg"/></div>
+				</div>
+			</li>
+			<li class="spacer"></li>
+			<li class="inner-right-p8">
+				<div class="dropdown-btn dt">
+					<span class="dropdown-btn-jt"><span>◇</span></span><i>客服服务</i>
+				</div>
+				<div class="dropdown-layer">
+					<div class="white"></div>
+					<div class="p8-item">客户</div>
+					<div class="p8-item1"><a href="">帮助中心</a></div>
+					<div class="p8-item1"><a href="">在线客服</a></div>
+					<div class="p8-item1"><a href="">客服邮箱</a></div>
+					<div class="p8-item1"><a href="">售后服务</a></div>
+					<div class="p8-item1"><a href="">意见建议</a></div>
+					<div class="p8-item2">商户</div>
+					<div class="p8-item1"><a href="">京东商学院</a></div>
+				</div>
+			</li>
+			<li class="spacer"></li>
+			<li class="inner-right-p9">
+				<div class="dropdown-btn dt">
+					<span class="dropdown-btn-jt"><span>◇</span></span><i>网站导航</i>
+				</div>
+				<div class="dropdown-layer1">
+					<div class="white1"></div>
+					<dl class="p9-part1">
+						<dt>特色主题</dt>
+						<dd>
+							<div class="p9item"><a href="">品牌街</a></div>
+							<div class="p9item"><a href="">好物100</a></div>
+							<div class="p9item"><a href="">京东预售</a></div>
+							<div class="p9item"><a href="">尖er货</a></div>
+							<div class="p9item"><a href="">京东首发</a></div>
+							<div class="p9item"><a href="">今日团购</a></div>
+							<div class="p9item"><a href="">优惠券</a></div>
+							<div class="p9item"><a href="">闪购</a></div>
+							<div class="p9item"><a href="">京东会员</a></div>
+							<div class="p9item"><a href="">天天低价</a></div>
+							<div class="p9item"><a href="">定期送</a></div>
+							<div class="p9item"><a href="">装机大师</a></div>
+							<div class="p9item"><a href="">新奇特</a></div>
+							<div class="p9item"><a href="">京东试用</a></div>
+							<div class="p9item"><a href="">礼品购</a></div>
+							<div class="p9item"><a href="">智能馆</a></div>
+							<div class="p9item"><a href="">玩bigger</a></div>
+							<div class="p9item"><a href="">大牌免息</a></div>
+							<div class="p9item"><a href="">北京老字号</a></div>
+						</dd>
+					</dl>
+					<dl class="p9-part2">
+						<dt>行业频道</dt>
+							<dd>
+								<div class="p9item"><a href="">服装城</a></div>
+								<div class="p9item"><a href="">家用电器</a></div>
+								<div class="p9item"><a href="">电脑办公</a></div>
+								<div class="p9item"><a href="">手机</a></div>
+								<div class="p9item"><a href="">美妆馆</a></div>
+								<div class="p9item"><a href="">食品</a></div>
+								<div class="p9item"><a href="">数码</a></div>
+								<div class="p9item"><a href="">母婴</a></div>
+								<div class="p9item"><a href="">家装城</a></div>
+								<div class="p9item"><a href="">运动户外</a></div>
+								<div class="p9item"><a href="">整车</a></div>
+								<div class="p9item"><a href="">图书</a></div>
+								<div class="p9item"><a href="">农资频道</a></div>
+								<div class="p9item"><a href="">京东智能</a></div>
+							</dd>
+					</dl>
+					<dl class="p9-part3">
+						<dt>生活服务</dt>
+							<dd>
+								<div class="p9item"><a href="">京东众筹</a></div>
+								<div class="p9item"><a href="">白条</a></div>
+								<div class="p9item"><a href="">京东钱包</a></div>
+								<div class="p9item"><a href="">京东小金库</a></div>
+								<div class="p9item"><a href="">理财</a></div>
+								<div class="p9item"><a href="">话费</a></div>
+								<div class="p9item"><a href="">旅行</a></div>
+								<div class="p9item"><a href="">彩票</a></div>
+								<div class="p9item"><a href="">游戏</a></div>
+								<div class="p9item"><a href="">机票酒店</a></div>
+								<div class="p9item"><a href="">电影票</a></div>
+								<div class="p9item"><a href="">水电煤</a></div>
+								<div class="p9item"><a href="">京东到家</a></div>
+								<div class="p9item"><a href="">京东微联</a></div>
+								<div class="p9item"><a href="">京东众测</a></div>
+							</dd>
+					</dl>
+					<dl class="p9-part4">
+						<dt>更多精彩</dt>
+							<dd>
+								<div class="p9item"><a href="">京东社区</a></div>
+								<div class="p9item"><a href="">京东通信</a></div>
+								<div class="p9item"><a href="">在线读书</a></div>
+								<div class="p9item"><a href="">京东E卡</a></div>
+								<div class="p9item"><a href="">智能社区</a></div>
+								<div class="p9item"><a href="">游戏社区</a></div>
+								<div class="p9item"><a href="">京友邦</a></div>
+								<div class="p9item"><a href="">卖家入驻</a></div>
+								<div class="p9item"><a href="">企业采购</a></div>
+								<div class="p9item"><a href="">服务市场</a></div>
+								<div class="p9item"><a href="">乡村招募</a></div>
+								<div class="p9item"><a href="">校园加盟</a></div>
+								<div class="p9item"><a href="">办公生活馆</a></div>
+								<div class="p9item"><a href="">知识产权维权</a></div>
+								<div class="p9item"><a href="">English Site</a></div>
+							</dd>
+					</dl>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>		
+
+
+<script type="text/javascript">
+	
+	if ( $.cookie("username") && $.cookie("password")) {
+		$(".inner-right-p1").css("display","none");
+		$(".inner-right-p0").css("display","block");
+		$(".inner-right-p0 a:first-child").html( $.cookie("username") );
+	}
+	
+	
+	
+	//首页选择城市
+	//*****************top****************************
+	$(".city").hover(
+		function  () {
+			$(this).children().not(".seleced").css({
+				"background":"#F1F1F1",
+				"color":"#c81623"
+			})
+		},
+		function  () {
+			$(this).children().css({
+				"background":"",
+				"color":""
+			})
+		}
+	).click(function  () {;
+		$('.seleced-city').html($(this).children().html());
+		$(this).children().css({
+			"background":"",
+			"color":""
+		}).addClass("seleced").parent().siblings().children().removeClass("seleced");
+	})
+	
+	$(".dropdown").hover(
+		function  () {
+			$(this).children().eq(0).addClass("dropdown-hover").css({
+				"padding": "0 24px 0 9px"
+			}).next().css("display","block");
+		},
+		function(){
+			$(this).children().eq(0).removeClass("dropdown-hover").css({
+				"padding": "0 25px 0 10px"
+			}).next().css("display","none")
+		
+		}
+	)
+	
+	$(".inner-right-p3").hover(
+		function  () {
+			$(this).children().eq(0).addClass("dropdown-hover").css({
+				"padding": "0 24px 0 7px"
+			}).next().css("display","block");
+		},
+		function(){
+			$(this).children().eq(0).removeClass("dropdown-hover").css({
+				"padding": "0 25px 0 8px"
+			}).next().css("display","none")
+		
+		}
+	)
+	
+	$(".inner-right-p6").hover(
+		function  () {
+			$(this).children().eq(0).addClass("dropdown-hover").css({
+				"padding": "0 24px 0 24px"
+			}).next().css("display","block");
+		},
+		function(){
+			$(this).children().eq(0).removeClass("dropdown-hover").css({
+				"padding": "0 25px 0 25px"
+			}).next().css("display","none")
+		
+		}
+	)
+	
+	$(".inner-right-p7").hover(
+		function  () {
+			$(this).children().eq(0).addClass("dropdown-hover").css({
+				"padding": "0 24px 0 7px"
+			}).next().css("display","block");
+		},
+		function(){
+			$(this).children().eq(0).removeClass("dropdown-hover").css({
+				"padding": "0 25px 0 8px"
+			}).next().css("display","none")
+		
+		}
+	)
+	
+	$(".inner-right-p8").hover(
+		function  () {
+			$(this).children().eq(0).addClass("dropdown-hover").css({
+				"padding": "0 24px 0 7px"
+			}).next().css("display","block");
+		},
+		function(){
+			$(this).children().eq(0).removeClass("dropdown-hover").css({
+				"padding": "0 25px 0 8px"
+			}).next().css("display","none")
+		
+		}
+	)
+	
+	$(".inner-right-p9").hover(
+		function  () {
+			$(this).children().eq(0).addClass("dropdown-hover").css({
+				"padding": "0 24px 0 7px"
+			}).next().css("display","block");
+		},
+		function(){
+			$(this).children().eq(0).removeClass("dropdown-hover").css({
+				"padding": "0 25px 0 8px"
+			}).next().css("display","none")
+		
+		}
+	)
+	
+	$(".logout").click(function  () {
+		$(this).parent().css("display","none");
+		$(".inner-right-p1").css("display","block");
+	})
+</script>

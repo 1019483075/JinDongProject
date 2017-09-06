@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>京东(JD.COM)-综合网购首选-正品低价、品质保障、配送及时、轻松购物！</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<script src="js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+<!--		**************topbar部分********************-->
+		<div class="topbarbox"></div>
+		<div class="cr">	</div>
+<!--		**************topbanner部分********************-->		
+		<div class="topbanner">
+			<div class="topbanner-inner">
+				<a class="topbanner-close" href="javascript:void(0)"></a>
+				<a href=""><img src="images/topbanner.jpg" style="width: 1210px;height: 80px;" alt="" /></a>
+			</div>
+		</div>
+		<div class="cr">	</div>
+<!--		**************header和nav部分********************-->
+		<div class="header-nav-box"></div>
+
+<!--		**************大背景部分********************-->
+		<div class="bg">
+			<a href=""></a>
+		</div>
+		
+<!--		**************焦点部分********************-->	
+		<div class="focus">
+			<div class="slider">
+				<ul class="slider-main">
+					<li class="slider-layer" style="opacity: 1;"><a href=""><img src="images/001.jpg" alt="" /></a></li>
+					<li class="slider-layer"><a href=""><img src="images/002.jpg" alt="" /></a></li>
+					<li class="slider-layer"><a href=""><img src="images/003.jpg" alt="" /></a></li>
+					<li class="slider-layer"><a href=""><img src="images/004.jpg" alt="" /></a></li>
+					<li class="slider-layer"><a href=""><img src="images/005.jpg" alt="" /></a></li>
+					<li class="slider-layer"><a href=""><img src="images/006.jpg" alt="" /></a></li>
+				</ul>
+			</div>
+			<div class="slider-ex">
+				<ul class="slider-page-num">
+					<li class="page-seleced">1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+				</ul>
+				<div class="slider-page-btn">
+					<a href="" class="left-btn"></a>
+					<a href="" class="right-btn"></a>
+				</div>
+			</div>
+		</div>
+<!--		**************焦点右边部分********************-->			
+		<div class="focus-extra">
+			<div class="news">
+				<div class="newst">
+					<h2>京东快报</h2>
+					<div class="news-ex">
+						<a href="">更多 ></a>
+					</div>
+				</div>
+				<div class="newsc">
+					<ul>
+						<li><a href=""><span>[特惠]</span>粽子也疯狂 1元开心抢</a></li>
+						<li><a href=""><span>[公告]</span>CES开幕体验智能京东智慧生活</a></li>
+						<li><a href=""><span>[特惠]</span>企业购周年庆全品类券限量抢</a></li>
+						<li><a href=""><span>[公告]</span>大连柳州开仓 211限时达扩大</a></li>
+						<li><a href=""><span>[特惠]</span>智能称9.9元，无人机低至499</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="lifeserv">
+				<div class="con">
+					<ul>
+						<li><a href=""><i style=" top: 13px; background: url(images/icon.png) no-repeat 0 0;" ></i><span>话费</span></a></li>
+						<li><a href=""><i style=" top: 13px; background: url(images/icon.png) no-repeat 0 -25px;" ></i><span>机票</span></a></li>
+						<li><a href=""><i style=" top: 13px; background: url(images/icon.png) no-repeat 0 -50px;" ></i><span>电影票</span></a></li>
+						<li><a href=""><i style=" top: 13px; background: url(images/icon.png) no-repeat 0 -75px;" ></i><span>游戏</span></a></li>
+						<li><a href=""><i style=" top: 13px; background: url(images/icon.png) no-repeat 0 -100px;" ></i><span>彩票</span></a></li>
+						<li><a href=""><i style=" top: 13px; background: url(images/icon.png) no-repeat 0 -125px;" ></i><span>团购</span></a></li>
+						<li><a href=""><i style=" top: 13px; background: url(images/icon.png) no-repeat 0 -150px;" ></i><span>酒店</span></a></li>
+						<li><a href=""><i style=" top: 13px; background: url(images/icon.png) no-repeat 0 -175px;" ></i><span>火车票</span></a></li>
+						<li><a href=""><i style=" top: 13px; background: url(images/icon.png) no-repeat 0 -250px;" ></i><span>众筹</span></a></li>
+						<li><a href=""><i style=" top: 13px; background: url(images/icon.png) no-repeat 0 -200px;" ></i><span>理财</span></a></li>
+						<li><a href=""><i style=" top: 13px; background: url(images/icon.png) no-repeat 0 -275px;" ></i><span>礼品卡</span></a></li>
+						<li><a href=""><i style=" top: 13px; background: url(images/icon.png) no-repeat 0 -225px;" ></i><span>白条</span></a></li>
+						
+					</ul>
+				</div>
+			</div>
+			<div class="rightad"><a href=""><img style="width: 250px;height: 75px;" src="images/right-ad.jpg" alt="" /></a></div>
+		</div>
+		<div class="cr1"></div>
+<!--		**************ajax加载数据第一部分********************-->
+		<div class="lazyload1">
+			<div class="lazytoday">
+				<!--时钟-->
+				<div Id="clock">
+					<span class="round">
+						<span class="dot"></span>
+						<span id="hour"></span>
+						<span id="sec"></span>
+						<span id="blockDot">
+							<b></b>
+						</span>
+					</span>
+				</div>
+				<!--时钟结束-->
+				<div class="slider">
+					<ul class="slider-main">
+						<li class="slider-layer">
+							<div class="p1"><a href=""><img src="images/013.jpg.webp" alt="" /></a></div>
+							<div class="p2"><a href=""><img src="images/014.jpg.webp" alt="" /></a></div>
+							<div class="p3"><a href=""><img src="images/015.jpg.webp" alt="" /></a></div>
+							<div class="p4"><a href=""><img src="images/016.jpg.webp" alt="" /></a></div>
+						</li>
+						<li class="slider-layer">
+							<div class="p1"><a href=""><img src="images/001.jpg.webp" alt="" /></a></div>
+							<div class="p2"><a href=""><img src="images/002.jpg.webp" alt="" /></a></div>
+							<div class="p3"><a href=""><img src="images/003.jpg.webp" alt="" /></a></div>
+							<div class="p4"><a href=""><img src="images/004.jpg.webp" alt="" /></a></div>
+						</li>
+						<li class="slider-layer">
+							<div class="p1"><a href=""><img src="images/005.jpg.webp" alt="" /></a></div>
+							<div class="p2"><a href=""><img src="images/006.jpg.webp" alt="" /></a></div>
+							<div class="p3"><a href=""><img src="images/007.jpg.webp" alt="" /></a></div>
+							<div class="p4"><a href=""><img src="images/008.jpg.webp" alt="" /></a></div>
+						</li>
+						<li class="slider-layer">
+							<div class="p1"><a href=""><img src="images/009.jpg.webp" alt="" /></a></div>
+							<div class="p2"><a href=""><img src="images/010.jpg.webp" alt="" /></a></div>
+							<div class="p3"><a href=""><img src="images/011.jpg.webp" alt="" /></a></div>
+							<div class="p4"><a href=""><img src="images/012.jpg.webp" alt="" /></a></div>
+						</li>
+						<li class="slider-layer">
+							<div class="p1"><a href=""><img src="images/013.jpg.webp" alt="" /></a></div>
+							<div class="p2"><a href=""><img src="images/014.jpg.webp" alt="" /></a></div>
+							<div class="p3"><a href=""><img src="images/015.jpg.webp" alt="" /></a></div>
+							<div class="p4"><a href=""><img src="images/016.jpg.webp" alt="" /></a></div>
+						</li>
+						<li class="slider-layer">
+							<div class="p1"><a href=""><img src="images/001.jpg.webp" alt="" /></a></div>
+							<div class="p2"><a href=""><img src="images/002.jpg.webp" alt="" /></a></div>
+							<div class="p3"><a href=""><img src="images/003.jpg.webp" alt="" /></a></div>
+							<div class="p4"><a href=""><img src="images/004.jpg.webp" alt="" /></a></div>
+						</li>
+					</ul>
+					<div class="slider-page-btn">
+						<a href="javascript:void(0)" class="left-btn no-red"><</a><a href="javascript:void(0)" class="right-btn no-red">></a>
+					</div>
+				</div>
+			</div>
+			<div class="lazyguesslike">
+				<div id="guessyou">
+					<div class="mt">
+						<h2>猜你喜欢</h2>
+						<a href="javascript:void(0)">换一批</a>
+					</div>
+					<div class="mc">
+						<div class="spacer"><i></i></div>
+						<div class="guesslike-left">
+							<div class="guesslike-left-mt"></div>
+							<div class="guesslike-left-mc">
+								<a href="">冲调diy</a>
+								<a href="">养生保健</a>
+								<a href="">萌宝</a>
+								<a href="">寒冬精选</a>
+								<a href="">童心未泯</a>
+								<a href="">爱生鲜</a>
+							</div>
+						</div>
+						<ul>
+							<li>
+								<div class="p-img"><a class="no-red" href=""><img src="" alt="" /></a></div>
+								<div class="p-text">
+									<div class="p-name"><a href="">adsfadsf</a></div>
+									<div class="p-price"><i>¥</i>62</div>
+								</div>
+							</li>
+							<li>
+								<div class="p-img"><a class="no-red" href=""><img src="" alt="" /></a></div>
+								<div class="p-text">
+									<div class="p-name"><a href="">adsfadsf</a></div>
+									<div class="p-price"><i>¥</i>62</div>
+								</div>
+							</li>
+							<li>
+								<div class="p-img"><a class="no-red" href=""><img src="" alt="" /></a></div>
+								<div class="p-text">
+									<div class="p-name"><a href="">adsfadsf</a></div>
+									<div class="p-price"><i>¥</i>62</div>
+								</div>
+							</li>
+							<li>
+								<div class="p-img"><a class="no-red" href=""><img src="" alt="" /></a></div>
+								<div class="p-text">
+									<div class="p-name"><a href="">adsfadsf</a></div>
+									<div class="p-price"><i>¥</i>62</div>
+								</div>
+							</li>
+							<li>
+								<div class="p-img"><a class="no-red" href=""><img src="" alt="" /></a></div>
+								<div class="p-text">
+									<div class="p-name"><a href="">adsfadsf</a></div>
+									<div class="p-price"><i>¥</i>62</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="lazygoodlife">
+				<div class="lazygoodlife-inner">
+					<h2>京东 · 品质生活</h2>
+					<div class="goodlife-content">
+						<div class="gl-p1">
+							<a href="" class="gl-item no-red">
+								<p class="area-tit">新发现</p>
+								<div class="gl-sub-title">
+									<p class="tit">尚新品</p>
+									<p class="desc">乐视行车记录仪尊享版</p>
+									<p class="prom">首发三重礼</p>
+								</div>
+								<img src="images/gl001.jpg" alt="" />
+							</a>
+							<a href="" class="gl-item-small no-red">								
+								<div class="gl-sub-title">
+									<p class="tit">新先购</p>
+									<p class="desc">蜻蜓无人机Pro</p>
+									<p class="prom">4K相机直降100</p>
+								</div>
+								<img src="images/gl002.jpg" alt="" />
+							</a>
+							<a href="" class="gl-item-small no-red">								
+								<div class="gl-sub-title">
+									<p class="tit">限时秒杀</p>
+									<p class="desc">品质好货抢购中</p>
+									<p class="prom">华硕游戏本秒杀</p>
+								</div>
+								<img src="images/gl003.jpg" alt="" />
+							</a>
+						</div>
+						<div class="gl-p2">
+							<a href="" class="gl-item no-red">
+								<p class="area-tit">好物100</p>
+								<div class="gl-sub-title">
+									<p class="tit">发现好物</p>
+									<p class="desc">常沟通促感情</p>
+									<p class="prom">华为Mate8</p>
+								</div>
+								<img src="images/gl004.jpg" alt="" />
+							</a>
+							<a href="" class="gl-item gl-item1 no-red">								
+								<div class="gl-sub-title gl-sub-title1">
+									<p class="tit">潮有范</p>
+									<p class="desc">遮阳也能凹造型</p>
+									<p class="prom">夏日潮搭潮范</p>
+								</div>
+								<img src="images/gl005.jpg" alt="" />
+							</a>
+						</div>
+						<div class="gl-p3">
+							<a href="" class="gl-item no-red">
+								<p class="area-tit">新发现</p>
+								<div class="gl-sub-title">
+									<p class="tit">尚新品</p>
+									<p class="desc">乐视行车记录仪尊享版</p>
+									<p class="prom">首发三重礼</p>
+								</div>
+								<img src="images/gl001.jpg" alt="" />
+							</a>
+							<a href="" class="gl-item-small no-red">								
+								<div class="gl-sub-title">
+									<p class="tit">新先购</p>
+									<p class="desc">蜻蜓无人机Pro</p>
+									<p class="prom">4K相机直降100</p>
+								</div>
+								<img src="images/gl002.jpg" alt="" />
+							</a>
+							<a href="" class="gl-item-small no-red">								
+								<div class="gl-sub-title">
+									<p class="tit">限时秒杀</p>
+									<p class="desc">品质好货抢购中</p>
+									<p class="prom">华硕游戏本秒杀</p>
+								</div>
+								<img src="images/gl003.jpg" alt="" />
+							</a>
+						</div>
+						<div class="gl-p4">
+							<div class="brand-left">
+								<ul>
+									<li><a href=""><img src="images/brand001.jpg" alt="" /></a></li>
+									<li><a href=""><img src="images/brand002.jpg" alt="" /></a></li>
+									<li><a href=""><img src="images/brand003.jpg" alt="" /></a></li>
+									<li><a href=""><img src="images/brand004.jpg" alt="" /></a></li>
+									<li><a href=""><img src="images/brand005.jpg" alt="" /></a></li>
+									<li><a href=""><img src="images/brand006.png" alt="" /></a></li>
+									<li><a href=""><img src="images/brand007.jpg" alt="" /></a></li>
+								</ul>
+							</div>
+							<div class="brand-right">
+								<ul>
+									<li><a href=""><img src="images/brand008.jpg" alt="" /></a></li>
+									<li><a href=""><img src="images/brand009.jpg" alt="" /></a></li>
+									<li><a href=""><img src="images/brand010.jpg" alt="" /></a></li>
+									<li><a href=""><img src="images/brand011.png" alt="" /></a></li>
+									<li><a href=""><img src="images/brand012.jpg" alt="" /></a></li>
+									<li><a href=""><img src="images/brand013.jpg" alt="" /></a></li>
+									<li><a href=""><img src="images/brand014.jpg" alt="" /></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="lazyload2">
+			<div class="floorbanner">
+				<a href=""><img src="images/floorpic1.jpg" alt="" /></a>
+				<a href=""><img src="images/floorpic2.jpg" alt="" /></a>
+				<a href=""><img src="images/floorpic3.jpg" alt="" /></a>
+			</div>
+			
+			<div class="floor1 floor lazyloading"></div>
+			<div class="floor2 floor lazyloading"></div>
+			
+			<div class="floorbanner">
+				<a href=""><img src="images/floorpic1.jpg" alt="" /></a>
+				<a href=""><img src="images/floorpic2.jpg" alt="" /></a>
+				<a href=""><img src="images/floorpic3.jpg" alt="" /></a>
+			</div>
+			
+			<div class="floor3 floor lazyloading"></div>
+			<div class="floor4 floor lazyloading"></div>
+			<div class="floor5 floor lazyloading"></div>
+			
+			<div class="floorbanner">
+				<a href=""><img src="images/floorpic1.jpg" alt="" /></a>
+				<a href=""><img src="images/floorpic2.jpg" alt="" /></a>
+				<a href=""><img src="images/floorpic3.jpg" alt="" /></a>
+			</div>
+			
+			<div class="floor6 floor lazyloading"></div>
+			<div class="floor7 floor lazyloading"></div>
+			<div class="floor8 floor lazyloading"></div>
+			<div class="floor9 floor lazyloading"></div>
+			
+			<div class="floorbanner">
+				<a href=""><img src="images/floorpic1.jpg" alt="" /></a>
+				<a href=""><img src="images/floorpic2.jpg" alt="" /></a>
+				<a href=""><img src="images/floorpic3.jpg" alt="" /></a>
+			</div>
+			
+			<div class="floor10 floor lazyloading"></div>
+			<div class="floor11 floor lazyloading"></div>
+			<div class="floor12 floor lazyloading"></div>
+			
+			<div class="lazyfoot"></div>
+		</div>
+		
+		
+		
+		<div class="elevator">
+			<ul>
+				<li><a href="javascript:void(0)">1F</a><a class="etitle no-red" href="javascript:void(0)">服饰</a></li>
+				<li><a href="javascript:void(0)">2F</a><a class="etitle no-red" href="javascript:void(0)">美妆</a></li>
+				<li><a href="javascript:void(0)">3F</a><a class="etitle no-red" href="javascript:void(0)">手机</a></li>
+				<li><a href="javascript:void(0)">4F</a><a class="etitle no-red" href="javascript:void(0)">家电</a></li>
+				<li><a href="javascript:void(0)">5F</a><a class="etitle no-red" href="javascript:void(0)">数码</a></li>
+				<li><a href="javascript:void(0)">6F</a><a class="etitle no-red" href="javascript:void(0)">运动</a></li>
+				<li><a href="javascript:void(0)">7F</a><a class="etitle no-red" href="javascript:void(0)">居家</a></li>
+				<li><a href="javascript:void(0)">8F</a><a class="etitle no-red" href="javascript:void(0)">母婴</a></li>
+				<li><a href="javascript:void(0)">9F</a><a class="etitle no-red" href="javascript:void(0)">食品</a></li>
+				<li><a href="javascript:void(0)">10F</a><a class="etitle no-red" href="javascript:void(0)">图书</a></li>
+				<li><a href="javascript:void(0)">11F</a><a class="etitle no-red" href="javascript:void(0)">车品</a></li>
+				<li><a href="javascript:void(0)">12F</a><a class="etitle no-red" href="javascript:void(0)">服务</a></li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			(function  () {
+				var floorarr=document.getElementsByClassName("floor");
+				$(".elevator").find("li").hover(
+					function  () {
+						$(this).addClass("hover").children().first().css("display","none");
+					},
+					function  () {
+						if ($(this).hasClass("current")) {
+							$(this).removeClass("hover").children().first().css("display","none");
+						}else{
+							$(this).removeClass("hover").children().first().css("display","block");
+						}
+					}
+				).click(function(){
+					$('body').animate({
+						"scrollTop":floorarr[ $(this).index() ].offsetTop
+					},1000)
+				})
+			})()
+			
+		</script>
+		
+		<div class="rightwrap"></div>
+		
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$.ajax({
+				url:"html/globaltopbar.html",
+				success:function  (res) {
+					$(".topbarbox").html(res);
+				}
+			});
+			$.ajax({
+				url:"html/globalnav.html",
+				success:function  (res) {
+					$(".header-nav-box").html(res);
+				}
+			});
+			$.ajax({
+				url:"html/globalrightbar.html",
+				success:function  (res) {
+					$(".rightwrap").html(res);
+				}
+			});
+			var floorture=[1,1,1,1,1,1,1,1,1,1,1,1];//控制楼层在滚动时不重复加载
+			$(window).scroll(function  () {
+				var h=$('body').scrollTop()+document.documentElement.clientHeight||document.body.clientHeight;
+				//console.log($(".lazyload2").children());
+				var floorarr=document.getElementsByClassName("floor");
+				//加载楼层
+				for (var i=0;i<12;i++) {
+					if (h>=floorarr[i].offsetTop  && h<= floorarr[i].offsetTop + floorarr[i].offsetHeight && floorture[i]) {
+						$(floorarr[i]).addClass("lazyloading-done");
+						(function  (i) {
+							$.ajax({
+								url:"html/floor"+(i+1)+".html",
+								success:function  (res) {
+									$(floorarr[i]).html(res);
+									floorture[i]=0;
+								}
+							});
+						})(i)
+					}
+					
+					if (h>=floorarr[0].offsetTop) {
+						$('.elevator').css("display","block");
+					}else{
+						$('.elevator').css("display","none");
+					}
+					
+					//改变左侧楼层信息
+					if(h>=floorarr[i].offsetTop  && h<= floorarr[i].offsetTop + floorarr[i].offsetHeight){
+						$(".elevator").find("li").eq(i).addClass("current").children().first().css("display","none");
+					}else{
+						$(".elevator").find("li").eq(i).removeClass("current").children().first().css("display","block");
+					}
+				}
+				//加载底部
+				if (h>$('.lazyfoot').offset().top) {
+					$.ajax({
+						url:"html/indexfooter.html",
+						success:function  (res) {
+							$('.lazyfoot').html(res);
+						}
+					});
+				}
+				
+			})
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/login.css"/>
+		<script src="../js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="header w">
+			<div class="logo">
+				<a href="../index.html"><img src="../images/logo-201305-b.png" alt="" /></a>
+				<b></b>
+			</div>
+		</div>
+		<div id="container">
+			<div id="banner-bg" class="w" >
+				<div class="login-form">
+					<div class="login-box">
+						<div class="mt">
+							<h1>京东会员</h1>
+							<div class="mt-ex">
+								<a href="register.html">
+									<b></b>
+									立即注册
+								</a>
+							</div>
+						</div>
+						<div class="msgboxwrap">
+							<div class="msgbox">
+								<b></b>
+								公共场所不建议自动登录，以防账号丢失
+							</div>
+							<div class="msgerror" style="display: none;">
+								<b></b>
+							</div>
+						</div>
+						
+						
+						<div class="mc">
+							<div id="loginform">
+								<div class="item">
+									<label class="login-label"></label>
+									<input class="itxt" type="" name="" id="" value="" placeholder="邮箱/用户名/已验证手机" />
+									<span class="clr"></span>
+								</div>
+								<div class="item">
+									<label class="login-label pwd-label"></label>
+									<input class="itxt" type="password" name="" id="" value="" placeholder="密码" />
+									<span class="clr"></span>
+								</div>
+								<div class="item item-checkbox">
+									<div class="safe">
+										<span>
+											<input type="checkbox" checked="" name="" id="" value="" />
+											<label for="">自动登录</label>
+										</span>
+										<span class="checkr">
+											<a href="">忘记密码</a>
+										</span>
+									</div>
+								</div>
+								<div class="item">
+									<button id="loginbtn">登&nbsp;&nbsp;&nbsp;&nbsp;录</button>
+								</div>
+							</div>
+							<div class="coagent">
+                                <h5>使用合作网站账号登录京东：</h5>
+                                <ul>
+                                    <li>
+									    <a href="javascript:void(0)">京东钱包</a>
+                                    		<span class="line">|</span>
+                                    	</li>
+									<li>
+									    <a href="javascript:void(0)" >QQ</a>
+                                        <span class="line">|</span>
+                                		</li>
+									<li>
+									    <a href="javascript:void(0)" >微信</a>
+									</li>
+                            		</ul>
+                            </div>
+						</div>
+					</div>
+					<a class="erweima" href=""></a>
+				</div>
+			</div>
+		</div>
+		<div class="footerbox"></div>
+		
+		<script type="text/javascript">
+			//加载底部
+			$.ajax({
+				url:"footersmall.html",
+				success:function(res){
+					$(".footerbox").html(res);
+				}
+			});
+			
+			//自动登录是否勾上
+			$(":checked").change(function  () {
+				if (  $(":checked").is(":checked")) {
+					$(".msgbox").css("display","block");
+				}else{
+					$(".msgbox").css("display","none");
+				}
+			})
+			
+			//输入框获得焦点
+			$(".itxt").focus(function  () {
+				$(this).prev().removeClass("login-label-error").addClass("login-label-focus").parent().removeClass("item-error").addClass("item-focus");
+			}).blur(function  () {
+				$(this).prev().removeClass("login-label-focus").parent().removeClass("item-focus");
+			}).keyup(function  () {
+				$(this).next().css("display","block");
+			})
+			
+			//清除输入框中的内容
+			$(".clr").click(function  () {
+				$(this).css("display","none").prev().val("").focus();
+			})
+			
+			$("#loginbtn").click(function(){
+//				点击登录按钮时先判断两个输入框是否为空，
+//					若都为空则提示：请输入账户名和密码 并且都添加error样式
+//						否则，若第一个为空，则提示:请输入账户名 添加error样式
+//								 若第二个为空，则提示:请输入密码 添加error样式
+//					若密码错误则提示: 账户名与密码不匹配，将密码框添加error样式
+				
+				
+				if ( $(".itxt").eq(0).val() && $(".itxt").eq(1).val()) {
+//					$.getJSON("../json/userinfo.json",function  (res) {
+//						for (var i=0;i<res.length;i++) {
+//							if ($(".itxt").eq(0).val()==res[i].username) {
+//								if ($(".itxt").eq(1).val()==res[i].password) {
+//									//将信息保存在cookie中
+//									$.cookie("username",$(".itxt").eq(0).val(),{ expires: 7, path: '/' });
+//									$.cookie("password",$(".itxt").eq(1).val(),{ expires: 7, path: '/' });
+//									window.location="../index.html"
+//									break;
+//								}
+//							}
+//						}
+//						if (i==res.length) {
+//							$(".msgerror").html("<b></b>账户名与密码不匹配").css("display","block").prev().css("display","none");
+//							$(".itxt").eq(1).val("").prev().addClass("login-label-error").parent().addClass("item-error");
+//						}
+//					})
+					var uid=$.cookie("uid");
+					var pwd=$.cookie("pwd");
+					if ($(".itxt").eq(0).val()==uid && $(".itxt").eq(1).val()==pwd) {
+						$.cookie("username",$(".itxt").eq(0).val(),{ expires: 7, path: '/' });
+						$.cookie("password",$(".itxt").eq(1).val(),{ expires: 7, path: '/' });
+						window.location="../index.html"
+					}else{
+						$(".msgerror").html("<b></b>账户名与密码不匹配").css("display","block").prev().css("display","none");
+						$(".itxt").eq(1).val("").prev().addClass("login-label-error").parent().addClass("item-error");
+					}
+				}else if ( ! $(".itxt").eq(0).val() ) {
+					//账户名为空
+					$(".msgerror").html("<b></b>请输入账户名").css("display","block").prev().css("display","none");
+					$(".itxt").eq(0).prev().addClass("login-label-error").parent().addClass("item-error");
+				}else if( ! $(".itxt").eq(1).val() ){
+					//密码为空
+					$(".msgerror").html("<b></b>请输入密码").css("display","block").prev().css("display","none");
+					$(".itxt").eq(1).prev().addClass("login-label-error").parent().addClass("item-error");
+				}
+			})
+		</script>
+		
+	</body>
+</html>

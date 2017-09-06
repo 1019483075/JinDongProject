@@ -1,0 +1,567 @@
+<style type="text/css">
+	.rightbar{
+		position: fixed;
+		z-index: 10;
+	    right: 0;
+	    top: 0;
+	    width: 0;
+	    height: 100%;
+	    border-right: 6px solid #7a6e6e;
+	}
+	
+	.right-box{
+		position: relative;
+		width: 270px;
+		left: 6px;
+		height: 100%;
+		background: #eceaea;
+		z-index: 5;
+	}
+	
+	.right-box-cart{
+		
+	    width: 270px;
+	   
+	    background: #eceaea;
+	    
+	}
+	
+	.right-box-cart h3 a{
+		 height: 40px;
+	    line-height: 40px;
+	    font-size: 14px;
+	}
+	
+	.right-box-cart i{
+		display: inline-block;
+		width: 20px;
+	    height: 18px;
+	    background: url(images/toolbars.png) no-repeat 0 -250px;
+	    margin-top: 11px;
+	    margin-right: 4px;
+	    margin-left: 10px;
+	    vertical-align: top;
+	}
+	
+	.right-box-cart span{
+		position: absolute;
+		background: url(images/toolbars.png) no-repeat 0 -250px;
+		width: 12px;
+	    height: 12px;
+	    position: absolute;
+	    right: 8px;
+	    top: 16px;
+	    cursor: pointer;
+	    transition: transform .2s ease-out 0s;
+	    -webkit-transition: transform .2s ease-out 0s;
+	}
+	.right-box-cart span:hover{
+		transform:rotate(180deg);
+	}
+	
+	.cart-promp{
+		padding: 12px 0 12px 57px;
+	    border-bottom: 1px dashed #e1e1e1;
+	   	background: white;
+	   	font-size: 12px;
+	}
+	.cart-promp em{
+		position: relative;
+	    float: left;
+	    width: 40px;
+	    height: 20px;
+	    margin-top: -1px;
+	    margin-left: -50px;
+	    margin-right: 17px;
+	    text-align: center;
+	    color: rgb(255, 255, 255);
+	    background-color: rgb(245, 136, 19);
+	    font: 12px/20px 宋体;
+	}
+	
+	/*.cart-promp i{
+		position: absolute;
+	    left: -10px;
+	    bottom: -6px;
+	    width: 6px;
+	    height: 6px;
+	    overflow: hidden;
+	    border-width: 3px;
+	    border-style: solid dashed dashed solid;
+	    border-color: #f58813 transparent transparent #f58813;
+	}*/
+	
+	
+	.cart-goods{
+		padding: 10px 0;
+	    
+	    overflow: hidden;
+	    font-size: 12px;
+	    background: white;
+	}
+	.cart-goods .p-img{
+		float: left;
+	    width: 50px;
+	    height: 50px;
+	    border: 1px solid #ddd;
+	    padding: 0;
+	    margin-right: 5px;
+	}
+	.cart-goods .p-img img{
+		width: 50px;
+		height: 50px;
+	}
+	.cart-goods .p-name{
+		height: 32px;
+	    line-height: 16px;
+	    margin-bottom: 4px;
+	    overflow: hidden;
+	}
+	
+	.cart-goods .p-price{
+		height: 16px;
+	    padding-right: 65px;
+	    overflow: hidden;
+	    font: 12px/16px verdana;
+	    color: #666;
+	    float: left;
+	}
+	.cart-goods .p-price strong{
+		color: #c81623;
+	    font-weight: 400;
+	}
+	
+	.checkoutwrap{
+		position: absolute;
+		bottom: 10px;
+		width: 100%;;
+	}
+	
+	
+	.cart-goods-checkout{
+		height: 40px;
+	    padding: 5px 110px 5px 5px;
+	   
+	   
+	}
+	
+	.c-amount,.c-total{
+		    color: #c81623;
+		   
+	}
+	
+	.c-btn{
+		position: absolute;
+	    right: 5px;
+	    top: 7px;
+	    width: 110px;
+	    height: 35px;
+	    font: 16px/35px "微软雅黑";
+	    text-align: center;
+	    background: #c81623;
+	    color: #fff;
+	}
+	
+	
+	.rightbar .tab-text{
+		display: block;
+		width: 60px;
+		height: 35px;
+		line-height: 35px;
+	    color: #fff;
+	    text-align: center;
+	    font-family: "微软雅黑";
+	    position: absolute;
+	    z-index: 1;
+	    left: 35px;
+	    top: 0;
+	    background-color: #7a6e6e;
+	     border-radius: 3px 0 0 3px;
+	}
+	
+	.toolbar{
+		/*position: relative;
+		width: 35px;
+		height: 216px;
+		right: 0;
+		top: 60px;*/
+		position: absolute;
+	    top: 50%;
+	    left: -29px;
+	    width: 35px;
+	    margin-top: -61px;
+	}
+	
+	.toolbar .toolbarhover .tab-ico{
+		background-color: rgb(200,22,35)
+	}
+	
+	.toolbar .toolbarhover .tab-text{
+		background-color: rgb(200,22,35)
+	}
+	
+	.toolbar .barbox{
+	    position: relative;
+	    width: 35px;
+	    height: 35px;
+	    margin-bottom: 1px;
+	    cursor: pointer;
+	    background-color: #7a6e6e;
+	    border-radius: 3px 0 0 3px;
+	}
+	
+	.barbox:hover{
+		background-color: rgb(200,22,35)
+	}
+	
+	.rightbar i{
+		background: url(images/toolbars.png) no-repeat;
+	}
+	.barbox .tab-ico{
+		display: block;
+		width: 34px;
+	    height: 35px;
+	    margin-left: 1px;
+	    position: relative;
+	    z-index: 2;
+	    background-color: #7a6e6e;
+	}
+	
+	.jd-vipbar .tab-ico{
+		background-position: -88px -175px;
+	}
+	
+	.jd-vipbar .tab-tip{
+		position: absolute;
+	    top: 8px;
+	    display: block;
+	    right: 10px;
+	    width: 6px;
+	    height: 6px;
+	    background-position: -150px -150px;
+	    z-index: 999;
+	}
+	
+	.jd-vipbar .tab-ico{
+		background-position: -88px -175px;
+	}
+	
+	.jd-cartbar .tab-ico{
+		background-position: -50px 0;
+	}
+	
+	.jd-followbar .tab-ico{
+		background-position: -50px -50px;
+	}
+	
+	.jd-history .tab-ico{
+		background-position: -50px -100px;
+	}
+	
+	.jd-message .tab-ico{
+		background-position: -190px -150px;
+	}
+	
+	.jdm-jimi .tab-ico{
+		background-position: -50px -150px;
+	}
+	
+	
+	
+	.foot-tool-bar{
+		width: 35px;
+		height: 72px;
+		position: fixed;
+		right: 0;
+		bottom: 0;
+	}
+	
+	.foot-tool-bar .tab-ico{
+		display: block;
+		width: 34px;
+	    height: 35px;
+	    margin-left: 1px;
+	    position: relative;
+	    z-index: 2;
+	    background-color: #7a6e6e;
+	}
+	
+	.footbarbox{
+		position: relative;
+	    width: 35px;
+	    height: 35px;
+	    margin-bottom: 1px;
+	    cursor: pointer;
+	    background-color: #7a6e6e;
+	    border-radius: 3px 0 0 3px;
+	}
+	
+	
+	.jd-backtop .tab-ico{
+		background-position: -50px -250px;
+	}
+	
+	.jdm-feedback .tab-ico{
+		background-position: -50px -300px;
+	}
+	
+	.foot-tool-bar .toolbarhover .tab-ico{
+		background-color: rgb(200,22,35)
+	}
+	
+	.foot-tool-bar .toolbarhover .tab-text{
+		background-color: rgb(200,22,35)
+	}
+	
+	.emp-cart{
+		text-align: center;
+		padding-top: 100px;
+	}
+	.emp-cart i{
+		width: 113px;
+	    height: 35px;
+	    display: inline-block;
+	    background: url(images/jdm-toolbar-face.png) no-repeat 0 0;
+	}
+	.emp-cart a{
+		color: #c81623;
+	}
+	
+	.toolbar .jd-cartbar .jd-cartbar-cout{
+		display: none;
+		position: absolute;
+	    z-index: 3;
+	    right: 2px;
+	    top: -5px;
+	    height: 11px;
+	    padding: 1px 2px;
+	    border: 1px solid #b61d1d;
+	    overflow: hidden;
+	    color: #fff;
+	    font: 11px/11px verdana;
+	    text-align: center;
+	    min-width: 11px;
+	    _width: 20px;
+	    -webkit-border-radius: 10px;
+	    -moz-border-radius: 10px;
+	    border-radius: 10px;
+	    border-radius: 0\9;
+	    background-color: #cc6060;
+	    background-image: -moz-linear-gradient(top,#cc6060,#b61d1d);
+	    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#cc6060),color-stop(1,#b61d1d));
+	    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc6060', endColorstr='#b61d1d', GradientType='0');
+	    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc6060', endColorstr='#b61d1d');
+	    background-image: linear-gradient(to bottom,#cc6060 0,#b61d1d 100%);
+	}
+</style>
+
+<div class="rightbar">
+	<div class="toolbar">
+		<div class="tb barbox toolbarhover jd-vipbar">
+			<i class="tab-tip"></i>
+			<i class="tab-ico"></i>
+			<em class="tab-text">京东会员</em>
+		</div>
+		<div class="tb barbox jd-cartbar">
+			<i class="tab-ico"></i>
+			<span class="jd-cartbar-cout"></span>
+			<em class="tab-text">购物车</em>
+			
+		</div>
+		<div class="tb barbox jd-followbar">
+			<i class="tab-ico"></i>
+			<em class="tab-text">我的关注</em>
+		</div>
+		<div class="tb barbox jd-history">
+			<i class="tab-ico"></i>
+			<em class="tab-text">我的足迹</em>
+		</div>
+		<div class="tb barbox jd-message">
+			<i class="tab-ico"></i>
+			<em class="tab-text">我的消息</em>
+		</div>
+		<div class="tb barbox jdm-jimi">
+			<i class="tab-ico"></i>
+			<em class="tab-text">咨询JIMI</em>
+		</div>
+	</div>
+	<div class="foot-tool-bar">
+		<div class="tb footbarbox jd-backtop">
+			<i class="tab-ico"></i>
+			<em class="tab-text">顶部</em>
+		</div>
+		<div class="tb footbarbox jdm-feedback">
+			<i class="tab-ico"></i>
+			<em class="tab-text">反馈</em>
+		</div>
+	</div>
+	<div class="right-box">
+		<div class="right-box-cart" >
+			<h3>
+				<a href="">
+					<i></i>
+					<em>购物车</em>
+				</a>
+				<span class="right-box-close"></span>
+			</h3>
+			<div class="emp-cart">
+				<i></i>
+				<p>购物车空空的，赶快去挑选心仪的商品吧~<br /><a class="no-red" href="">去首页看看</a></p>
+			</div>
+			<div class="cart-info" style="display: none;">
+				<div class="cart-promp">
+					<em>
+						满赠
+						<!--<i></i>-->
+					</em>
+					已购满999元，您可领赠品
+				</div>
+				<div class="cart-goods">
+					<b class="p-img">
+						<a href=""><img class="cartgoodspic" src="" alt="" /></a>
+					</b>
+					<div class="p-name">
+						<a class="cartgoodstxt" href="">
+							Apple MacBook Pro 13.3英寸笔记本电脑 银色(Core i5 处理器/8GB内存/256GB SSD闪存/Retina屏 MF840CH/A)
+						</a>
+					</div>
+					<div class="p-price">
+						<strong>¥10788.00</strong>
+						×<em class="p-num">1</em>
+					</div>
+					<a class="remove-goods" href="javascript:;">删除</a>
+				</div>
+			</div>
+			<div class="checkoutwrap">
+				<div class="cart-goods-checkout">
+					<div class="c-num">
+						<strong class="c-amount">0</strong>
+						件商品
+					</div>
+					<div class="c-sum">
+						共计：
+						<strong class="c-total">¥0</strong>
+					</div>
+					<a class="c-btn no-red" href="cart.html">去购物车结算</a>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	//右侧toolbar
+			
+			
+	$('.tab-ico').parent().hover(
+		function  () {
+			$(this).children().last().stop().animate({
+				"left":"-59px"
+			},800).parent().addClass("toolbarhover");
+		},
+		function  () {
+			$(this).children().last().stop().animate({
+				"left":"35px"
+			}).parent().removeClass("toolbarhover");
+		}
+	)
+	
+	$(".toolbar .tab-ico").click(function  () {
+		$(".rightbar").animate({
+			"right":270
+		})
+	})
+	
+	$(".right-box-close").click(function  () {
+		$(this).parents(".rightbar").animate({
+			"right":0
+		})
+	})
+	
+	$(".jd-backtop").click(function  () {
+		$('body').scrollTop(0);
+	})
+	
+	//读cookie中的商品信息  goodsID，goodsNum为首页的全局变量
+	var goodsID=[];  
+	var goodsNum=[];
+	if ($.cookie("cartgoodsid")) {
+		goodsID=$.cookie("cartgoodsid").split(",");
+		goodsNum=$.cookie("cartgoodnum").split(",");
+		$(".jd-cartbar-cout").css("display","block").html(goodsID.length)
+	}else{
+		goodsID=[];
+		goodsNum=[];
+	}
+	
+	$(".jd-cartbar").click(function(){
+		//goodsID=$.cookie("cartgoodsid").split(",");
+		if (!$.cookie("cartgoodsid")) {
+			
+			$(".emp-cart").css("display","block");
+		}else{
+			
+			$(".emp-cart").css("display","none");
+			$.getJSON("json/cart-guessyou.json",function  (res) {
+				for (var i=0;i<goodsID.length;i++) {
+					for (var j=0;j<res.data.length;j++) {
+						if (goodsID[i]==res.data[j].sid) {
+							addInCart(res.data[j],goodsNum[i]);
+							
+							var sum=0;
+							$(".cart-info:visible").find(".p-price").each(function  () {
+								sum=parseFloat($(this).children("strong").html())*parseFloat($(this).children("em").html())+sum;
+							})
+							$(".c-amount").html(goodsID.length)
+							$(".c-total").html("¥"+sum.toFixed(2))
+						}
+					}
+				}
+			})
+		}
+	})
+	
+	function addInCart (J,n) {
+		var clone=$(".cart-info:hidden").clone(true);
+		clone.find(".cartgoodspic").attr("src",J.img);
+		clone.find(".cartgoodspic").attr("sid",J.sid);
+		clone.find(".cartgoodstxt").html(J.t);
+		clone.find(".cart-goods .p-price strong").html(J.pcp);
+		clone.find(".cart-goods .p-price .p-num").html(n);
+		clone.css("display","block");
+		clone.insertAfter(".right-box-cart h3");
+	}
+	
+	$(".remove-goods").click(function  () {
+		var n=$(this).siblings(".p-img").find("img").attr("sid");
+		goodsNum.splice(goodsID.indexOf(n),1);
+		var temp=[];
+		for (var i=0;i<goodsID.length;i++) {
+			if (n!=goodsID[i]) {
+				temp.push(goodsID[i])
+			}
+		}
+		if (temp.length==0) {
+			$(".emp-cart").css("display","block");
+			$(".jd-cartbar-cout").css("display","none");
+		}
+		$(this).parents(".cart-info").remove();
+		goodsID=temp;
+		$.cookie("cartgoodsid",goodsID.toString(),{ expires: 7, path: '/' });
+		$.cookie("cartgoodnum",goodsNum.toString(),{ expires: 7, path: '/' });
+		$(".c-amount").html(goodsID.length);
+		$(".jd-cartbar-cout").html(goodsID.length)
+		totalP();
+	})
+	
+	//计算总价
+	function totalP () {
+		var sum=0;
+		$(".cart-info:visible").find(".p-price").each(function  () {
+			sum=parseFloat($(this).children("strong").html())*parseFloat($(this).children("em").html())+sum;
+		})
+		$(".c-amount").html(goodsID.length)
+		$(".c-total").html("¥"+sum.toFixed(2))
+	}
+</script>

@@ -1,0 +1,286 @@
+body{
+	font-family: "Microsoft YaHei";
+	color: black;
+	font-size: 14px;
+}
+
+a{
+	color: black;
+}
+
+.header{
+	height: 110px;
+    background: url(../images/headbg.jpg) repeat-x left bottom;
+}
+
+.header .logo{
+	width: 1210px;
+	height: 76px;
+	margin: 0 auto;
+}
+
+.logo .logobg {
+	width: 160px;
+	height: 50px;
+	margin-top: 24px;
+	display: block;	
+	float: left;
+	background: url(../images/icon1.png) no-repeat;
+}
+
+.logo .logo-title{
+	height: 34px;
+	line-height: 34px;
+	font-size: 18px;
+	margin: 34px 0 0 25px;
+	padding-left: 25px;
+	border-left: 1px solid #bbb;
+	float: left;
+	font-weight: 700;
+	color: black;
+}
+
+.logo .have-accout{
+	height: 21px;
+	margin-top: 55px;
+	float: right;
+	font-size: 16px;
+	color: #999;
+}
+
+/*.have-accout a{
+	font-weight: 700;
+}*/
+
+
+.container{
+	width: 1210px;
+	
+	margin: 0 auto;
+}
+
+.container .main{
+	width: 830px;
+	overflow: hidden;
+	margin: 50px 190px 60px 190px;
+	
+}
+
+.main .reg-form{
+	width: 400px;
+	
+	float: left;
+}
+.reg-form form{
+	width: 400px;
+	
+	
+}
+
+.reg-form form .form-item{
+	position: relative;
+    border: solid 1px #ddd;
+    width: 398px;
+    height: 52px;
+}
+
+.reg-form form  .form-item-error{
+	border: solid 1px #e22;
+}
+
+
+.form-item label{
+	display: inline-block;
+	width: 90px;
+	height: 52px;
+	line-height: 52px;
+	text-align: center;
+	font-size: 14px;
+	padding-left: 20px;
+	color: #666;
+}
+
+.form-item txt{
+	position: absolute;
+    z-index: 2;
+    line-height: 46px;
+    margin-left: 20px;
+    margin-top: 2px;
+    font-size: 14px;
+    font-family: 'Microsoft YaHei', 'Hiragino Sans GB';
+    color: rgb(204, 204, 204);
+    display: inline;
+}
+
+.form-item input{
+	position: absolute;
+	width: 190px;
+	height: 19px;
+	line-height: 19px;
+	padding: 16px 1px 11px 20px;
+	font-size: 14px;
+}
+
+form .i-status{
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	right: 20px;
+	top: 20px;
+	display: none;
+	background: url(../images/icon1.png) no-repeat 0 -117px;
+}
+
+form .i-error{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	vertical-align: text-top;
+	margin-right: 8px;
+	background: url(../images/icon1.png) no-repeat -17px -100px;
+}
+
+.input-tip .infoerror{
+	color: #e22;
+}
+
+
+form .input-tip{
+	width: 400px;
+	height: 27px;
+	padding-top: 5px;
+	
+}
+
+.orPhone, .orEmail{
+	position: absolute;
+	right: 0;
+	bottom: 10px;
+	font-size: 14px;
+	
+}
+.orEmail a , .orPhone a, .form-agree a{
+	color: #3388ff;
+}	
+
+
+.item-email-wrap, .item-phone-wrap{
+	position: relative;	
+}
+
+
+.form-item-authcode txt{
+	position: absolute;
+    z-index: 2;
+    line-height: 46px;
+    margin-left: 20px;
+    margin-top: 2px;
+    font-size: 14px;
+    font-family: 'Microsoft YaHei', 'Hiragino Sans GB';
+    color: rgb(204, 204, 204);
+    display: inline;
+}
+
+.form-item-authcode input{
+	width: 150px;
+}
+
+.form-item-authcode img{
+	display: block;
+	
+	position: absolute;
+	right: 3px;
+	top: 3px;
+	width: 110px;
+	height: 46px;
+	cursor: pointer;
+}
+
+.form-item-phonecode,.form-item-authcode{
+	position: relative;
+}
+.form-item-phonecode button{
+	position: absolute;
+    right: 3px;
+    top: 3px;
+    width: 110px;
+    height: 46px;
+    border: none;
+    background: #f2f2f2;
+    color: #333;
+    padding: 0;
+}
+.form-item-phonecode input{
+	width: 150px;
+}
+
+
+.form-agree{
+	color: #333;
+	font-size: 12px;
+}
+
+#submitbtn{
+	width: 388px;
+	height: 54px;
+	padding: 0 6px;
+	color: white;
+	background: #e22;
+	border: 0;
+	font-size: 16px;;
+}
+
+
+.reg-other{
+	float: left;
+	margin-left: 104px;
+	height: 605px;
+	padding-left: 90px;
+	border-left: solid 1px #e6e6e6;
+}
+
+.phone-fast-reg{
+	background: url(../images/phone.jpg) no-repeat;
+	width: 213px;
+	height: 270px;
+}
+
+.company-reg{
+	width: 160px;
+	height: 60px;
+	margin: 50px 0 0 30px;
+	border-bottom: 1px solid #ddd;
+}
+
+
+
+.company-reg i{
+	display: inline-block;	
+	width: 30px;
+	height: 29px;
+	margin-right: 15px;
+	background: url(../images/icon1.png) no-repeat 0 -50px;
+}
+
+.inter-cust{
+	width: 160px;
+	margin-left: 30px;
+	margin-top: 30px;
+}
+.inter-cust i{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background: url(../images/icon1.png) no-repeat -50px -50px;
+	margin-right: 15px;
+	float: left;
+	margin-top: 7px;
+}
+
+
+
+
+
+
+
+

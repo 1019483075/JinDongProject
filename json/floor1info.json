@@ -1,0 +1,59 @@
+{
+	
+	"data":[
+		{
+			"img": "images/floor1/1.jpg"
+		},{
+			"img": "images/floor1/2.jpg"
+		},{
+			"img": "images/floor1/3.jpg"
+		},{
+			"img": "images/floor1/4-1.jpg"
+		},{
+			"img": "images/floor1/4-2.jpg"
+		},{
+			"img": "images/floor1/4-3.jpg"
+		},{
+			"img": "images/floor1/4-4.jpg"
+		},{
+			"img": "images/floor1/5.jpg"
+		},{
+			"img": "images/floor1/6.jpg"
+		},{
+			"img": "images/floor1/7.jpg"
+		},{
+			"img": "images/floor1/8.jpg"
+		},{
+			"img": "images/floor1/9.jpg"
+		},{
+			"img": "images/floor1/10.jpg"
+		},{
+			"img": "images/floor1/11.jpg"
+		},{
+			"img": "images/floor1/12.jpg"
+		}
+	],
+	"brand":[
+		{
+			"img": "images/floor1/b1.png"
+		},{
+			"img": "images/floor1/b2.jpg"
+		},{
+			"img": "images/floor1/b3.jpg"
+		},{
+			"img": "images/floor1/b4.png"
+		},{
+			"img": "images/floor1/b5.jpg"
+		},{
+			"img": "images/floor1/b6.jpg"
+		},{
+			"img": "images/floor1/b7.jpg"
+		},{
+			"img": "images/floor1/b8.jpg"
+		},{
+			"img": "images/floor1/b9.jpg"
+		},{
+			"img": "images/floor1/b10.jpg"
+		}
+	]
+}

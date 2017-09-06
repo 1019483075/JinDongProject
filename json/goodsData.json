@@ -1,0 +1,74 @@
+{
+	"21.5英寸|双核 i5 /8GB内存/1TB存储":{
+		"t":"Apple iMac 21.5英寸一体机（Core i5 处理器/8GB内存/1TB存储 MK142CH/A）",
+		"p":"7988.00",
+		"disabled":"false",
+		"sid":"2060618"
+	},
+	"21.5英寸|四核 i5 /8GB内存/1TB存储":{
+		"t":"Apple iMac 21.5英寸一体机（Core i5 处理器/8GB内存/1TB存储 MK442CH/A）",
+		"p":"9688.00",
+		"disabled":"false",
+		"sid":"2060619"
+	},
+	"21.5英寸|四核 i5 /8GB内存/1TB FD存储":{
+		"t":"",
+		"p":"",
+		"disabled":"true",
+		"sid":""
+	},
+	"21.5英寸|四核 i5 /8GB内存/2TB FD存储":{
+		"t":"",
+		"p":"",
+		"disabled":"true",
+		"sid":""
+	},
+	"21.5英寸Retina 4K显示屏|双核 i5 /8GB内存/1TB存储":{
+		"t":"",
+		"p":"",
+		"disabled":"true",
+		"sid":""
+	},
+	"21.5英寸Retina 4K显示屏|四核 i5 /8GB内存/1TB存储":{
+		"t":"Apple iMac 21.5英寸一体机（Core i5 处理器/8GB内存/1TB存储/Retina 4K屏 MK452CH/A）",
+		"p":"10988.00",
+		"disabled":"false",
+		"sid":"2060610"
+	},
+	"21.5英寸Retina 4K显示屏|四核 i5 /8GB内存/1TB FD存储":{
+		"t":"",
+		"p":"",
+		"disabled":"true",
+		"sid":""
+	},
+	"21.5英寸Retina 4K显示屏|四核 i5 /8GB内存/2TB FD存储":{
+		"t":"",
+		"p":"",
+		"disabled":"true",
+		"sid":""
+	},
+	"27英寸Retina 5K 显示屏|双核 i5 /8GB内存/1TB存储":{
+		"t":"",
+		"p":"",
+		"disabled":"true",
+		"sid":""
+	},
+	"27英寸Retina 5K 显示屏|四核 i5 /8GB内存/1TB存储":{
+		"t":"Apple iMac 27英寸一体机（Core i5 处理器/8GB内存/1TB存储/2GB独显/Retina 5K屏 MK462CH/A）",
+		"p":"13488.00",
+		"disabled":"false",
+		"sid":"2060604"
+	},
+	"27英寸Retina 5K 显示屏|四核 i5 /8GB内存/1TB FD存储":{
+		"t":"Apple iMac 27英寸一体机（Core i5 处理器/8GB内存/1TB存储/2GB独显/配备Retina 5K显示屏 MK472CH/A）",
+		"p":"14988.00",
+		"disabled":"false",
+		"sid":"2060614"
+	},
+	"27英寸Retina 5K 显示屏|四核 i5 /8GB内存/2TB FD存储":{
+		"t":"Apple iMac 27英寸一体机（Core i5 处理器/8GB内存/2TB存储/2GB独显/配备Retina 5K显示屏 MK482CH/A）",
+		"p":"16988.00",
+		"disabled":"false",
+		"sid":"2060621"
+	}
+}

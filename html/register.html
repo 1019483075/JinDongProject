@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人注册</title>
+		<link rel="stylesheet" type="text/css" href="../css/register.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+	</head>
+	<body>
+		<div class="header">
+			<div class="logo">
+				<a class="logobg" href="../index.html"></a>
+				<div class="logo-title">欢 迎 注 册</div>
+				<div class="have-accout">已有账号
+					<a href="login.html">请登录</a>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="main">
+				<div class="reg-form">
+					<form action="">
+						<div class="form-item">
+							<label>用　户　名</label>
+							<txt>您的账户名和登录名</txt>
+							<input id="form-accout" type="text" default ="<i class= 'i-def'></i>支持中文、字母、数字、“-”“_”的组合，4-20个字符"/>
+							<i class="i-status"></i>
+						</div>
+						<div class="input-tip">
+							<span id="accout-info"></span>
+						</div>
+						<div class="form-item">
+							<label>设 置 密 码</label>
+							<txt>建议至少使用两种字符组合</txt>
+							<input id="form-pwd" type="password"  default="<i class=i-def></i>建议使用字母、数字和符号两种及以上的组合，6-20个字符" />
+							<i class="i-status"></i>
+						</div>
+						<div class="input-tip">
+							<span id="accout-info"></span>
+						</div>
+						<div class="form-item">
+							<label>确 认 密 码</label>
+							<txt>请再次输入密码</txt>
+							<input id="form-repwd" type="password"  default='<i class="i-def"></i>请再次输入密码' />
+							<i class="i-status"></i>
+						</div>
+						<div class="input-tip">
+							<span id="accout-info"></span>
+						</div>
+						<div class="item-email-wrap" style="display: none;">
+							<div class="form-item">
+								<label>邮 箱 验 证</label>
+								<txt>建议使用常用邮箱	</txt>
+								<input id="form-email" type="text" default='<i class="i-def"></i>完成验证后，你可以用该邮箱登录和找回密码' />
+								<i class="i-status"></i>
+							</div>
+							<div class="input-tip">
+								<span id="accout-info"></span>
+							</div>
+							<div class="orPhone">
+								或
+								<a href="javascript:void(0)">手机验证</a>
+							</div>
+						</div>
+						<div class="item-phone-wrap">
+							<div class="form-item">
+								<label>
+									中国 + 86
+									<a href="javascript:void(0)" class="arrow"></a>
+								</label>
+								<txt>建议使用常用手机	</txt>
+								<input id="form-phone" type="text" default='<i class="i-def"></i>完成验证后，可以使用该手机登录和找回密码' />
+								<i class="i-status"></i>
+								<div class="scrollbar"></div>
+							</div>
+							<div class="input-tip">
+								<span id="accout-info"></span>
+							</div>
+							<div class="orEmail" style="display: block;">	
+								<!--或
+								<a href="javascript:void(0)">邮箱验证</a>-->
+							</div>
+						</div>
+						<div class="form-item form-item-authcode">
+							<label>验　证　码</label>
+							<txt>请输入验证码</txt>
+							<input id="form-vcode" type="text" default='<i class="i-def"></i>看不清？点击图片更换验证码' />
+							<i class="i-status" style="right: 115px;"></i>
+							<img src="" alt="" d="" />
+						</div>
+						<div class="input-tip">
+							<span id="accout-info"></span>
+						</div>
+						<div class="form-item form-item-phonecode">
+							<label>手机验证码</label>
+							<txt>请输入验证码</txt>
+							<input id="form-pcode" type="text" />
+							<button>获取验证码</button>
+						</div>
+						<div class="input-tip">
+							<span id="accout-info"></span>
+						</div>
+						<div class="form-agree">
+							<div class="form-item-valid">
+								<input type="checkbox" checked="" name="" id="" value="" />
+								我已阅读并同意
+								<a href="javascript:void(0)">《京东用户注册协议》</a>
+							</div>
+							<div class="input-tip"></div>
+						</div>
+						<div>
+							<button id="submitbtn">立即注册</button>
+						</div>
+					</form>
+				</div>
+				<div class="reg-other">
+					<div class="phone-fast-reg"></div>
+					<div class="company-reg">
+						<a href=""><i class="i-company"></i><span>企业用户注册</span></a>
+					</div>
+					<div class="inter-cust">
+						<a href=""><i class="i-glob"></i><span>INTERNATIONAL<br>CUSTOMERS</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footerwrap"></div>
+		
+		<script src="../js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/register.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$.ajax({
+				url:"footersmall.html",
+				success:function  (res) {
+					$(".footerwrap").html(res);
+				}
+			});
+		</script>
+	</body>
+</html>
